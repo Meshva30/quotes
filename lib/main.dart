@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:quotes/SplaceScreen.dart';
 import 'package:quotes/screen/homescreen.dart';
-void main()
-{
-  runApp(
-    QuotesApp()
-  );
+
+void main() {
+  runApp(QuotesApp());
 }
+
 class QuotesApp extends StatefulWidget {
   const QuotesApp({super.key});
 
@@ -20,7 +20,8 @@ class _QuotesAppState extends State<QuotesApp> {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(useMaterial3: true),
       routes: {
-        '/':(context) => HomeScreen(),
+        '/': (context) => Splacescreen(),
+        'home': (context) => HomeScreen(),
       },
     );
   }

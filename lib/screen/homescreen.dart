@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 import '../utils/colorpalate.dart';
 import '../utils/customwidgets.dart';
 import '../utils/quoteslist.dart';
@@ -14,12 +12,23 @@ class HomeScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.black,
+          backgroundColor: Color(0xff5272F2),
           centerTitle: true,
-          title: const Text('My Quotes',style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500,letterSpacing: 1),),
+          title: const Text(
+            'My Quotes',
+            style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w500,
+                letterSpacing: 1),
+          ),
         ),
-        backgroundColor: Colors.black,
-        body: ListView.builder(itemBuilder: (context, index) => quotesBox(quotesList[index]['quote'],quotesList[index]['author']),itemCount: quotesList.length,),
+        backgroundColor: Color(0xffB0DAFF),
+        body: ListView.builder(
+
+          itemBuilder: (context, index) => quotesBox(
+              quotesList[index]['quote'], quotesList[index]['author']),
+          itemCount: quotesList.length,
+        ),
       ),
     );
   }
